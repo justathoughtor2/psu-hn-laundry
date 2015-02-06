@@ -1,0 +1,6 @@
+<h1>{{ query.query_text }}</h1>
+<ul>
+  {% for response in query.response_set.all %}
+    <li>{{ response.machine_type }}</li>
+  {% endfor %}
+</ul>
