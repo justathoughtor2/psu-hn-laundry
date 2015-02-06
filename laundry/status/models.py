@@ -7,6 +7,7 @@ class Query(models.Model):
 
 class Response(models.Model):
     query = models.ForeignKey(Query)
-    response_value = models.BooleanField(default=False)
+    response_type = models.CharField(max_length=200)
+    in_use = models.BooleanField(default=False)
     def __unicode__(self):
         return u'%s' % (self.response_text)
