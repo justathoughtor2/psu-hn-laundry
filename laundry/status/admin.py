@@ -1,5 +1,5 @@
 from django.contrib import admin
-from polls.models import Query, Response
+from status.models import Query, Response
 
 class ResponseInline(admin.StackedInline):
     model = Response
