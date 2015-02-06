@@ -10,4 +10,4 @@ class Response(models.Model):
     machine_type = models.CharField(max_length=200)
     machine_in_use = models.IntegerField(default=-1)
     def __unicode__(self):
-        return u'%s' % (self.response_text)
+        return u'%s' % (self.machine_type)
