@@ -7,7 +7,8 @@ class Query(models.Model):
 
 class Response(models.Model):
     query = models.ForeignKey(Query)
-    response_type = models.CharField(max_length=200)
+    machine_type = models.CharField(max_length=200)
     in_use = models.BooleanField(default=False)
+    num_machines = models.IntegerField(default=10)
     def __unicode__(self):
         return u'%s' % (self.response_text)
