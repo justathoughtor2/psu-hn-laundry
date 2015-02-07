@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, url
-import views
 
-urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
-    url(r'^(?P<query_id>\d+/$', views.detail, name='detail')
+urlpatterns = patterns('status.views',
+    url(r'^$', 'index', name='index'),
+    url(r'^(?P<query_id>\d+)/$', 'detail', name='detail')
 )
